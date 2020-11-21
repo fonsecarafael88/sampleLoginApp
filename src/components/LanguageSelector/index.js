@@ -4,10 +4,11 @@ import cnFlag from "../../assets/china-flag-icon-64.png";
 import "./style.css";
 
 function LanguageSelector(props) {
-  const { selectType, onChange } = props;
+  const { selectType, onChange, disabled } = props;
 
   //selectType = "localization" || "phoneCode"
   //onChange = function
+  //disabled = true || false, default: false
 
   //Array with the values for the select
   const countries = [
@@ -46,6 +47,7 @@ function LanguageSelector(props) {
       variant="standard"
       onChange={onChange}
       disableUnderline
+      disabled={disabled ? disabled : false}
     >
       {countries.map((item, index) => {
         return (

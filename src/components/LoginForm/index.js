@@ -37,8 +37,21 @@ function LoginForm() {
   }, [startCountDown, counter]);
 
   const startTimer = () => {
-    setCounter(60);
-    setStartCountDown(true);
+    //Verify the phone number
+    //For brazilian phone numbers 10 or 11 digits, for Chinese phone numbers 11 digits
+    if((phoneNumber.length >= (countryCode === "55" ? 10 : 11)) && (phoneNumber.match(/^[0-9]+$/) != null)){
+      
+      //if phone number is correct, start counter.
+      setCounter(60);
+      setStartCountDown(true);
+
+    }else{
+
+      //If Phone number is incorrect, show error.
+      let errors = fromErrors;
+      errors[0] = true;
+      setFormErrors([...errors]);
+    }
   };
 
   const changeCountryCode = (event) => {
@@ -127,12 +140,14 @@ function LoginForm() {
           type="number"
           notched={false}
           error={fromErrors[0]}
+          disabled={startCountDown}
           startAdornment={
             <InputAdornment position="start">
               {/* Phone Area code select */}
               <LanguageSelector
                 selectType={"phoneCode"}
                 onChange={changeCountryCode}
+                disabled={startCountDown}
               />
             </InputAdornment>
           }
