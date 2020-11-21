@@ -1,0 +1,25 @@
+.walletLogo{
+  margin-bottom: 30px;
+  width: 30%;
+  max-width: 220px;
+  min-width: 160px;
+  height: auto;
+}
+
+.loginInput{
+  width: 100%;
+  max-width: 340px;
+  min-width: 260px;
+  margin: 16px 0 16px 0 !important;
+}
+
+.LoginButtonRoot span {
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  height: 44px;
+}
+.SMSButtonRoot span {
+  color: #33ad88;
+  text-transform: none;
+}

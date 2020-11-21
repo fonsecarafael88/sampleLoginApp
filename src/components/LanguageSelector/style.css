@@ -1,0 +1,34 @@
+.langSelectDropIcon {
+  display: none !important;
+}
+
+.langSelect span,
+.langSelectDrop span {
+  padding-left: 8px;
+  color: black;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.langSelect:focus {
+  background-color: white !important;
+}
+.flagImg {
+  height: 16px;
+}
+.flagImgText {
+  vertical-align: middle;
+}
+.arrow {
+  border: solid #33ad88;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  margin-left: -18px;
+  margin-top: -2px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}

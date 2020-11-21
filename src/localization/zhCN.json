@@ -1,0 +1,6 @@
+{
+    "login.input.phone": "电话号码",
+    "login.input.code": "验证码",
+    "login.btn.sms": "提交",
+    "login.btn.submit": "登录"
+}
